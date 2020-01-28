@@ -13,10 +13,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const MONGODB_URI =
-  'mongodb+srv://kdord:kdordExerciseApp@cluster0-7mvfw.gcp.mongodb.net/test?retryWrites=true&w=majority';
+// const MONGODB_URI =
+//   'mongodb+srv://kdord:kdordExerciseApp@cluster0-7mvfw.gcp.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(process.env.MONGODB_URI || MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
