@@ -61,11 +61,9 @@ class EditTodo extends Component {
       todo_priority: this.state.todo_priority,
       todo_completed: this.state.todo_completed
     };
-    axios
-      .post('http://lhost:8080/todos/update/' + this.props.match.params.id, obj)
-      .then(res => {
-        console.log(res);
-      });
+    axios.post('/todos/update/' + this.props.match.params.id, obj).then(res => {
+      console.log(res);
+    });
     this.props.history.push('/');
   };
 
